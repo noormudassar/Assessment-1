@@ -193,9 +193,25 @@ console.log(pinkTons);
 
 // CODE HERE
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
+let fujiPounds = 0;
+let galaPounds = 0;
+let pinkPounds = 0;
+
+// we iterate through each of the tons of apples then multiply that value by 2000 to get pounds per day per ton. these values are then added to the individual apple totals.
+for (let i = 0; i < fujiTons.length; i++) {
+  fujiPounds += fujiTons[i] * 2000;
+}
+console.log(fujiPounds);
+
+for (let i = 0; i < galaTons.length; i++) {
+  galaPounds += galaTons[i] * 2000;
+}
+console.log(galaPounds);
+
+for (let i = 0; i < pinkTons.length; i++) {
+  pinkPounds += pinkTons[i] * 2000;
+}
+console.log(pinkPounds);
 
 // PROBLEM 6
 
@@ -215,9 +231,14 @@ console.log(pinkTons);
 
 // CODE HERE
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
+// to get total profits, the number of total pounds per each individual apple variety are multiplied by the price per pound of the apples
+let fujiProfit = fujiPounds * fujiPrice;
+let galaProfit = galaPounds * galaPrice;
+let pinkProfit = pinkPounds * pinkPrice;
+
+console.log(
+  `Fuji apple profit: ${fujiProfit}, Gala apple profit: ${galaProfit}, Pink apple profit: ${pinkProfit}`
+);
 
 // PROBLEM 7
 
@@ -230,3 +251,7 @@ console.log(pinkTons);
 */
 
 // CODE HERE
+
+// adding up all the individual profits to get the total profit number
+let totalProfit = fujiProfit + galaProfit + pinkProfit;
+console.log(`Total profit: ${totalProfit}`);
