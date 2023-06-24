@@ -51,8 +51,22 @@ const pinkPrice = .55
 
 // CODE HERE
 
+// we start by creating a variable for the total number of acres
+let totalAcres = 0;
 
-
+// we want to loop through the array and then taking each individual value, add it to the total
+for (let i = 0; i < fujiAcres.length; i++) {
+    totalAcres += fujiAcres[i]
+}
+// we do this for the gala acres and then the pink acres
+for (let i = 0; i < galaAcres.length; i++) {
+    totalAcres += galaAcres[i]
+}
+for (let i = 0; i < pinkAcres.length; i++) {
+    totalAcres += pinkAcres[i]
+}
+// console log the total to make sure all the values are computing correctly 
+console.log(totalAcres)
 
 
 // PROBLEM 2
